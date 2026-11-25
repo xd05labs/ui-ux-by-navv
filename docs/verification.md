@@ -1,11 +1,5 @@
 # Executed verification — 2026-11-25
 
-## UI/UX-first entry correction
-
-The UI/UX correction passed the full local suite: **57 tests**, including eight new visual-flow tests and nine updated entry/context tests. Repository integrity, both generated-document consistency checks, local Markdown links and the publisher's offline preview passed. The preview selected 134 files. AI_START.md is now the short design-question entry; AI_CONTEXT.md carries the full implementation reference.
-
-Tests cover the opening style menu's early placement and concrete options, explicit-choice resumption, defaults versus actual answers, per-question Auto behavior, complete design review before progression, all 20 styles, typed configuration values, malformed flow data, privacy and cross-platform generation. These are prompt/data/routing checks, not a claim that every external LLM was exercised. No generated application UI was changed; browser checks were not repeated locally for this guide correction.
-
 ## Link-first AI entry
 
 The single-file entry update passed `python -m unittest discover -s tests -v`: **49 tests**, including nine entry-pack tests. Repository integrity, generated-entry consistency, local Markdown links and the offline publisher preview passed. The preview selected 129 files and included AI_START.md and its supporting code/configuration.

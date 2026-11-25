@@ -1,11 +1,5 @@
 # Changelog
 
-## Unreleased — UI/UX-first conversation
-
-- Replaced the large generic entry with a short AI_START.md that asks a concrete style menu first and waits for a choice; full implementation context moves to AI_CONTEXT.md.
-- Added an eight-stage visual questionnaire with Auto/Custom choices, an all-style expansion, resumption of explicit preferences and a design-review gate before architecture/code.
-- Added typed-choice, stage-routing and review-gate tests; both generated documents are checked for drift.
-
 ## Unreleased — link-first AI entry
 
 - Added a generated single-file AI_START.md entry for a software description plus one link, with an attachment/paste fallback for hosts that cannot browse.

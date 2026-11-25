@@ -2,13 +2,13 @@
 
 **From conversation to complete application.**
 
-## Paste the link and choose your UI/UX
+## Describe your software, paste one link
 
-Describe your software if you already know its requirements, then paste this message into your AI assistant:
+Write what you want to build in your AI assistant, then paste this message:
 
-> Start the interactive UI/UX wizard from https://raw.githubusercontent.com/xd05labs/ui-ux-by-navv/main/AI_START.md. Ask me to choose a UI style first, with lettered options, Auto and Custom. Wait for my reply, then ask about colors, layout and the remaining visual choices. Keep preferences I already gave. Review the design before generating code.
+> Use AppForge from https://raw.githubusercontent.com/xd05labs/ui-ux-by-navv/main/AI_START.md. Use my software description above, summarize the requirements you already know, and ask only the missing questions. Show the design and architecture before implementation.
 
-**[Start with AI_START.md](AI_START.md)** — the short UI/UX guide starts with Minimal, Bento, Matte glass, Apple-inspired, Material, Corporate, Futuristic and Luxury options, plus all 20 styles, Auto and Custom. The assistant asks one design stage at a time, preserves existing preferences, and shows the selected design for review. Full implementation instructions/catalogs live in [AI_CONTEXT.md](AI_CONTEXT.md) and are read when needed. If an assistant cannot open links, attach/paste AI_START.md. UI/UX conversation needs no local installation; actual file creation and tests depend on available tools.
+**[Start with AI_START.md](AI_START.md)** — a single-file guide with the shared protocol and catalog summaries. The assistant should preserve your proposed features, pages, roles, design, technology choices and software structure. You can also put your description after the link. If the assistant cannot open links, attach this file or paste its contents into the conversation. It can start discovery without a local installation; creating files and executing tests depend on the assistant's actual tools.
 
 See the [link-first guide](docs/link-first.md) for the attachment fallback, expected workflow, host capability limits and owner publishing steps.
 
@@ -54,7 +54,7 @@ An existing saved project takes precedence over starting discovery again. For re
 
 ## Included today
 
-- **39 CLI discovery questions** and an eight-stage conversational UI/UX flow, concrete/recommended/automatic/custom choices, eight operating modes, immediate checkpoints and answer provenance.
+- **39 adaptive questions**, recommended/automatic/custom answers, eight operating modes, immediate checkpoints and answer provenance.
 - **19 industry blueprints**, each with pages, workflows, field definitions, proposed models, starter scope and domain extension requirements.
 - **20 visual recipes × eight palettes × eight layouts × three densities**, with light/dark/system tokens, adjustable radius, RTL direction and reduced-motion handling. Combinations describe configurable recipes, not individually certified designs.
 - Offline interactive design preview with JSON copy/import and semantic contrast measurements.
