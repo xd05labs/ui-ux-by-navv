@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — link-first AI entry
+
+- Added a generated single-file AI_START.md entry for a software description plus one link, with an attachment/paste fallback for hosts that cannot browse.
+- Updated central instructions to extract already-supplied requirements/structure and ask only missing questions, at most three at a time.
+- Added deterministic entry generation, configured repository URLs, stale-entry checks and tests for catalog coverage, privacy, path validation and cross-platform consistency.
+- Preserved explicit execution/capability limits; no universal LLM execution or live hosted builder is claimed.
+
 ## Unreleased — licensing and clean publishing
 
 - Added numbered publisher menus for setup, preview, new/existing repositories, sign-in, reports, help and exit; missing requirements can be downloaded/installed through the terminal using WinGet, with a terminal bootstrap option if WinGet is missing.

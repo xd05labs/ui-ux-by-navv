@@ -1,5 +1,7 @@
 # Start here
 
+For users pasting a link into an AI assistant, start with [AI_START.md](AI_START.md). It contains the shared instructions, description-first entry behavior and catalog summaries in one file, and can also be attached or pasted when URL access is unavailable. Use the user's software description and known choices before asking any discovery questions. The full local workflow below applies when repository/terminal tools are available.
+
 If you are maintaining this framework, follow the user's requested change and run the relevant repository checks. The discovery workflow below is for building an application with AppForge.
 
 1. Read [master instructions](ai-core/master-instructions.md), [execution protocol](ai-core/execution-protocol.md) and [capabilities](docs/capabilities.md).

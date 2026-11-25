@@ -10,6 +10,10 @@ Read the repository entry files, execution protocol, capability matrix, relevant
 
 Inspect the selected workspace and existing project before starting discovery. Resume persisted preferences and approved decisions. Do not ask answered questions again unless they conflict with new requirements. When maintaining AppForge itself, implement the maintenance request rather than invoking the application wizard.
 
+For a user who supplies a repository link and a software description, use AI_START.md as the portable entry. Read the description and earlier relevant messages before asking questions. Extract the already-specified application purpose, name, users/roles, features, pages, workflows, file/software structure, design and technology choices. Summarize what is known and ask at most three relevant missing questions at a time. Do not ask the user to repeat a description, select a mode or install software when the next useful step can be completed from their existing brief.
+
+With file tools, persist extracted typed values with user provenance and retain extra workflows/features/acceptance criteria. Keep a supplied file tree and existing architecture as constraints. Never erase requested functionality merely to satisfy the narrow executable adapter; use a reviewed agent-assisted implementation for additional requirements. Customize generated application files while preserving Builder source. In a chat-only host, emit a portable checkpoint and clearly identify that it has not been written to disk.
+
 ## Discover adaptively
 
 Offer quick, advanced, autonomous, reference, existing-project, design-only, backend-only and enterprise modes. Ask manageable groups of relevant questions. Every question must offer a recommended choice with a short reason, automatic selection and custom input. Use `wizard/questions.json`; skip irrelevant questions and save each answer with user/recommended/automatic/imported provenance.

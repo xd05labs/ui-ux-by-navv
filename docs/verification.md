@@ -1,5 +1,11 @@
 # Executed verification — 2026-11-25
 
+## Link-first AI entry
+
+The single-file entry update passed `python -m unittest discover -s tests -v`: **49 tests**, including nine entry-pack tests. Repository integrity, generated-entry consistency, local Markdown links and the offline publisher preview passed. The preview selected 129 files and included AI_START.md and its supporting code/configuration.
+
+Entry tests cover embedded central instructions, current catalog/question coverage, exclusion of private workspace/environment content, source changes, LF/CRLF stability, source-path restrictions, credential-free URL configuration, context-size limits and read-only checks. These are document/generator checks; they do not certify behavior across arbitrary LLMs. No generated application UI changed, and the prior browser run was not repeated for this entry update.
+
 ## Numbered publisher menu and terminal setup
 
 The menu/setup update passed `python -m unittest discover -s tests -v`: **40 tests** (27 core and 13 Windows publisher tests). Repository integrity checks and the checkout's offline BAT dry run also passed. The actual BAT entry was exercised with menu input, including help and exit. Tests covered menu routing, invalid options, error recovery, installation cancellation, strict offline behavior, WinGet bootstrap selection, installation failures, same-session discovery/PATH refresh and terminal process output/exit codes. Existing filtered-snapshot and local-remote publish tests continued to pass.

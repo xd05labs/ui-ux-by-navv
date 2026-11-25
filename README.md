@@ -2,6 +2,16 @@
 
 **From conversation to complete application.**
 
+## Describe your software, paste one link
+
+Write what you want to build in your AI assistant, then paste this message:
+
+> Use AppForge from https://raw.githubusercontent.com/xd05labs/ui-ux-by-navv/main/AI_START.md. Use my software description above, summarize the requirements you already know, and ask only the missing questions. Show the design and architecture before implementation.
+
+**[Start with AI_START.md](AI_START.md)** — a single-file guide with the shared protocol and catalog summaries. The assistant should preserve your proposed features, pages, roles, design, technology choices and software structure. You can also put your description after the link. If the assistant cannot open links, attach this file or paste its contents into the conversation. It can start discovery without a local installation; creating files and executing tests depend on the assistant's actual tools.
+
+See the [link-first guide](docs/link-first.md) for the attachment fallback, expected workflow, host capability limits and owner publishing steps.
+
 Ask. Design. Generate. Validate. Deploy.
 
 **License:** the Builder is source-available under [restricted use terms](LICENSE): viewing and unmodified use are allowed; additional copying, source modification and redistribution require permission. Generated applications may be customized and redistributed under the [generated-app exception](GENERATED_APP_LICENSE.txt). See [licensing and GitHub limits](docs/licensing.md).
@@ -38,7 +48,7 @@ Open http://127.0.0.1:8000 and create your own account. There are no default cre
 
 ## Use with an AI environment
 
-Open the repository and ask: “Read START_HERE.md and help me build an application.” Codex, Claude Code, Gemini CLI, Copilot, Cursor and Windsurf entry files all point to [one master protocol](ai-core/master-instructions.md). Text-only LLMs can conduct discovery and emit specifications; they must not claim to have written files or executed tests. Repository instructions cannot force automatic execution in every host.
+Paste the single-file [AI_START.md](AI_START.md) link with your software description, or open the local repository and ask: “Read START_HERE.md and help me build this application using the description I already supplied.” Codex, Claude Code, Gemini CLI, Copilot, Cursor and Windsurf entry files all point to [one master protocol](ai-core/master-instructions.md). Text-only LLMs can conduct discovery and emit specifications; they must not claim to have written files or executed tests. Repository instructions cannot force automatic execution in every host.
 
 An existing saved project takes precedence over starting discovery again. For repository maintenance, work on the requested framework change; do not launch the application wizard unnecessarily.
 
@@ -98,6 +108,9 @@ Copy [Publish-Clean.bat](Publish-Clean.bat) into any project root and double-cli
 ```sh
 python -m unittest discover -s tests -v
 python scripts/check_repository.py
+# Refresh the shareable AI guide after editing central instructions/catalogs:
+python scripts/build_ai_start.py
+python scripts/build_ai_start.py --check
 # Optional standards and browser verification:
 python -m pip install -r requirements-dev.txt
 python scripts/check_repository.py --jsonschema
