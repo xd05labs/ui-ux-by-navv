@@ -7,7 +7,8 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 from appforge.catalog import catalogs
-from appforge.ai_entry import build_ai_start
+from appforge.ai_entry import build_ai_documents
+from appforge.uiux_samples import check_samples
 from appforge.config import check, defaults
 from appforge.design import contrast_report
 from appforge.schema import validate_file
@@ -37,9 +38,11 @@ def main():
             value = value[part]
     for entry in ("AGENTS.md", "CLAUDE.md", "GEMINI.md", ".github/copilot-instructions.md", ".cursor/rules/appforge.mdc", ".windsurf/rules/appforge.md"):
         assert "ai-core/master-instructions.md" in (ROOT / entry).read_text(encoding="utf-8")
-    entry_path = ROOT / "AI_START.md"
-    if not entry_path.exists() or entry_path.read_text(encoding="utf-8") != build_ai_start(ROOT):
-        raise ValueError("AI_START.md is missing or stale. Run python scripts/build_ai_start.py")
+    for name, content in build_ai_documents(ROOT).items():
+        path = ROOT / name
+        if not path.exists() or path.read_text(encoding="utf-8") != content:
+            raise ValueError(name + " is missing or stale. Run python scripts/build_ai_start.py")
+    visual_samples = check_samples(ROOT)
     independent = "not requested"
     if args.jsonschema:
         from jsonschema import Draft202012Validator
@@ -53,7 +56,7 @@ def main():
         independent = "passed"
     print(json.dumps({"passed": True, "blueprints": len(data["blueprints"]), "styles": len(data["styles"]),
                       "palettes": len(data["palettes"]), "configsValidated": len(configs), "schemas": len(schemas),
-                      "independentJsonSchema": independent, "aiEntry": "current"}, indent=2))
+                      "independentJsonSchema": independent, "aiEntry": "current", "visualSamples": visual_samples}, indent=2))
 
 
 if __name__ == "__main__":

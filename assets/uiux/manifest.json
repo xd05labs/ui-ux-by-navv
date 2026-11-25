@@ -1,0 +1,548 @@
+{
+  "schemaVersion": 1,
+  "sourceDigest": "75b463a1f4521bef5a5b91ffa139ccbda9bd980a1863ae53190693858713e746",
+  "samples": {
+    "assets/uiux/style.png": {
+      "path": "design.style",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "minimal",
+          "label": "Minimal"
+        },
+        {
+          "code": "B",
+          "value": "bento",
+          "label": "Bento"
+        },
+        {
+          "code": "C",
+          "value": "matte-glass",
+          "label": "Matte glass"
+        },
+        {
+          "code": "D",
+          "value": "apple-inspired",
+          "label": "Apple inspired"
+        },
+        {
+          "code": "E",
+          "value": "material-design",
+          "label": "Material design"
+        },
+        {
+          "code": "F",
+          "value": "corporate",
+          "label": "Corporate"
+        },
+        {
+          "code": "G",
+          "value": "futuristic",
+          "label": "Futuristic"
+        },
+        {
+          "code": "H",
+          "value": "luxury",
+          "label": "Luxury"
+        }
+      ],
+      "sha256": "f11ed7f8eb82bc53b5b930aeac57489a19ff751b3d49421448d1b38e56d02d49",
+      "dimensions": [
+        1200,
+        1694
+      ]
+    },
+    "assets/uiux/style-all.png": {
+      "path": "design.style",
+      "expanded": true,
+      "options": [
+        {
+          "code": "1",
+          "value": "apple-inspired",
+          "label": "Apple inspired"
+        },
+        {
+          "code": "2",
+          "value": "material-design",
+          "label": "Material design"
+        },
+        {
+          "code": "3",
+          "value": "fluent-design",
+          "label": "Fluent design"
+        },
+        {
+          "code": "4",
+          "value": "linux-inspired",
+          "label": "Linux inspired"
+        },
+        {
+          "code": "5",
+          "value": "glassmorphism",
+          "label": "Glassmorphism"
+        },
+        {
+          "code": "6",
+          "value": "matte-glass",
+          "label": "Matte glass"
+        },
+        {
+          "code": "7",
+          "value": "neumorphism",
+          "label": "Neumorphism"
+        },
+        {
+          "code": "8",
+          "value": "bento",
+          "label": "Bento"
+        },
+        {
+          "code": "9",
+          "value": "futuristic",
+          "label": "Futuristic"
+        },
+        {
+          "code": "10",
+          "value": "minimal",
+          "label": "Minimal"
+        },
+        {
+          "code": "11",
+          "value": "brutalism",
+          "label": "Brutalism"
+        },
+        {
+          "code": "12",
+          "value": "flat",
+          "label": "Flat"
+        },
+        {
+          "code": "13",
+          "value": "retro",
+          "label": "Retro"
+        },
+        {
+          "code": "14",
+          "value": "cyberpunk",
+          "label": "Cyberpunk"
+        },
+        {
+          "code": "15",
+          "value": "corporate",
+          "label": "Corporate"
+        },
+        {
+          "code": "16",
+          "value": "editorial",
+          "label": "Editorial"
+        },
+        {
+          "code": "17",
+          "value": "monochrome",
+          "label": "Monochrome"
+        },
+        {
+          "code": "18",
+          "value": "industrial",
+          "label": "Industrial"
+        },
+        {
+          "code": "19",
+          "value": "luxury",
+          "label": "Luxury"
+        },
+        {
+          "code": "20",
+          "value": "custom",
+          "label": "Custom"
+        }
+      ],
+      "sha256": "9ed330ae781d6405df19815281a9dbab15850622e93dcb2fa34516d75584f32d",
+      "dimensions": [
+        1200,
+        3886
+      ]
+    },
+    "assets/uiux/theme.png": {
+      "path": "design.theme",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "light",
+          "label": "Light"
+        },
+        {
+          "code": "B",
+          "value": "dark",
+          "label": "Dark"
+        },
+        {
+          "code": "C",
+          "value": "system",
+          "label": "Follow system"
+        }
+      ],
+      "sha256": "9c99bd1446322f0e2ea91dccf38557f7081d8472a1064123b698af0c5c6ead02",
+      "dimensions": [
+        1200,
+        598
+      ]
+    },
+    "assets/uiux/palette.png": {
+      "path": "design.palette",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "midnight-premium",
+          "label": "Midnight premium"
+        },
+        {
+          "code": "B",
+          "value": "royal-purple",
+          "label": "Royal purple"
+        },
+        {
+          "code": "C",
+          "value": "emerald",
+          "label": "Emerald"
+        },
+        {
+          "code": "D",
+          "value": "indian-tricolor",
+          "label": "Indian tricolor"
+        },
+        {
+          "code": "E",
+          "value": "enterprise",
+          "label": "Enterprise"
+        },
+        {
+          "code": "F",
+          "value": "luxury-gold",
+          "label": "Luxury gold"
+        },
+        {
+          "code": "G",
+          "value": "ocean-blue",
+          "label": "Ocean blue"
+        },
+        {
+          "code": "H",
+          "value": "monochrome",
+          "label": "Monochrome"
+        }
+      ],
+      "sha256": "03e3d1f4405bff6f841afa2d4902f37f0b3ad251e6470fa8f204e9b36b605ea1",
+      "dimensions": [
+        1200,
+        1694
+      ]
+    },
+    "assets/uiux/navigation-type.png": {
+      "path": "design.navigation.type",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "left-sidebar",
+          "label": "Left sidebar"
+        },
+        {
+          "code": "B",
+          "value": "right-sidebar",
+          "label": "Right sidebar"
+        },
+        {
+          "code": "C",
+          "value": "top-navigation",
+          "label": "Top navigation"
+        },
+        {
+          "code": "D",
+          "value": "bottom-navigation",
+          "label": "Bottom navigation"
+        },
+        {
+          "code": "E",
+          "value": "floating-sidebar",
+          "label": "Floating sidebar"
+        },
+        {
+          "code": "F",
+          "value": "dual-sidebar",
+          "label": "Dual sidebar / multi-panel concept"
+        },
+        {
+          "code": "G",
+          "value": "centered",
+          "label": "Centered layout"
+        },
+        {
+          "code": "H",
+          "value": "bento-dashboard",
+          "label": "Bento dashboard"
+        }
+      ],
+      "sha256": "775b04d93181a65e3568fb56ce7f3a6e17dbbbc364b8bbf85426093adce58f1f",
+      "dimensions": [
+        1200,
+        1694
+      ]
+    },
+    "assets/uiux/density.png": {
+      "path": "design.density",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "compact",
+          "label": "Compact"
+        },
+        {
+          "code": "B",
+          "value": "comfortable",
+          "label": "Comfortable"
+        },
+        {
+          "code": "C",
+          "value": "spacious",
+          "label": "Spacious"
+        }
+      ],
+      "sha256": "8531a6e71af7a40478b9a3793f6b3b07182ea23eec70cb135d0a602ddf3062db",
+      "dimensions": [
+        1200,
+        618
+      ]
+    },
+    "assets/uiux/borderRadius.png": {
+      "path": "design.borderRadius",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": 0,
+          "label": "Square - 0px"
+        },
+        {
+          "code": "B",
+          "value": 8,
+          "label": "Subtle - 8px"
+        },
+        {
+          "code": "C",
+          "value": 14,
+          "label": "Soft - 14px"
+        },
+        {
+          "code": "D",
+          "value": 22,
+          "label": "Rounded - 22px"
+        }
+      ],
+      "sha256": "835c5d1b97cbf1b31167e6e44c01eb988de322bc4f12c4405a2130d5cca004f1",
+      "dimensions": [
+        1200,
+        963
+      ]
+    },
+    "assets/uiux/typography.png": {
+      "path": "design.typography",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "modern",
+          "label": "Modern"
+        },
+        {
+          "code": "B",
+          "value": "corporate",
+          "label": "Corporate"
+        },
+        {
+          "code": "C",
+          "value": "technical",
+          "label": "Technical / monospace"
+        },
+        {
+          "code": "D",
+          "value": "luxury",
+          "label": "Luxury / serif"
+        },
+        {
+          "code": "E",
+          "value": "minimalist",
+          "label": "Minimalist"
+        }
+      ],
+      "sha256": "6467af5bcbdca77f3240681491c6a4cdae63015b89020f684407d46518154851",
+      "dimensions": [
+        1200,
+        1329
+      ]
+    },
+    "assets/uiux/icons.png": {
+      "path": "design.icons",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "outline",
+          "label": "Outline"
+        },
+        {
+          "code": "B",
+          "value": "filled",
+          "label": "Filled"
+        },
+        {
+          "code": "C",
+          "value": "duotone",
+          "label": "Duotone"
+        },
+        {
+          "code": "D",
+          "value": "rounded",
+          "label": "Rounded"
+        }
+      ],
+      "sha256": "c3c0f8049c34c8fec5e15c2cfbff8a80f6bfd974f8a9eb7c0c686505bbcf4bd0",
+      "dimensions": [
+        1200,
+        963
+      ]
+    },
+    "assets/uiux/background-type.png": {
+      "path": "design.background.type",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "solid",
+          "label": "Solid color"
+        },
+        {
+          "code": "B",
+          "value": "gradient",
+          "label": "Subtle gradient"
+        },
+        {
+          "code": "C",
+          "value": "mesh",
+          "label": "Mesh gradient"
+        },
+        {
+          "code": "D",
+          "value": "svg-pattern",
+          "label": "Pattern"
+        },
+        {
+          "code": "E",
+          "value": "image",
+          "label": "Image / photo"
+        },
+        {
+          "code": "F",
+          "value": "video",
+          "label": "Video"
+        },
+        {
+          "code": "G",
+          "value": "animated",
+          "label": "Animated"
+        },
+        {
+          "code": "H",
+          "value": "particles",
+          "label": "Particles"
+        },
+        {
+          "code": "I",
+          "value": "3d",
+          "label": "3D"
+        },
+        {
+          "code": "J",
+          "value": "texture",
+          "label": "Texture"
+        }
+      ],
+      "sha256": "2883b6a36c60640bb522afd41f976a63af51b9f0f36087af985e071246cc9617",
+      "dimensions": [
+        1200,
+        2059
+      ]
+    },
+    "assets/uiux/motion.png": {
+      "path": "design.motion",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "minimal",
+          "label": "Minimal"
+        },
+        {
+          "code": "B",
+          "value": "smooth",
+          "label": "Smooth"
+        },
+        {
+          "code": "C",
+          "value": "cinematic",
+          "label": "Cinematic"
+        },
+        {
+          "code": "D",
+          "value": "spring",
+          "label": "Spring-like"
+        },
+        {
+          "code": "E",
+          "value": "disabled",
+          "label": "Disabled"
+        }
+      ],
+      "sha256": "72b8d8af15000b78d0675c20c21285ab8e450852529ed608cf8c25685c2bf9cb",
+      "dimensions": [
+        1200,
+        2059
+      ]
+    },
+    "assets/uiux/logoPosition.png": {
+      "path": "design.logoPosition",
+      "expanded": false,
+      "options": [
+        {
+          "code": "A",
+          "value": "top-left",
+          "label": "Top left"
+        },
+        {
+          "code": "B",
+          "value": "top-center",
+          "label": "Top center"
+        },
+        {
+          "code": "C",
+          "value": "top-right",
+          "label": "Top right"
+        },
+        {
+          "code": "D",
+          "value": "sidebar",
+          "label": "Inside sidebar"
+        }
+      ],
+      "sha256": "d20af907a15277aba3297ede5c801188b55a979904f2745124979984d7e3e97c",
+      "dimensions": [
+        1200,
+        963
+      ]
+    }
+  }
+}

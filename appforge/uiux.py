@@ -73,11 +73,26 @@ def question_choices(question, root=ROOT, all_choices=False):
     return result
 
 
-def render_uiux_question(question, root=ROOT, all_choices=False):
+def sample_path(question, all_choices=False):
+    """Stable, repository-relative preview name, including expanded style numbering."""
+    name = question["path"].removeprefix("design.").replace(".", "-")
+    if not name or any(c not in "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-" for c in name):
+        raise ValueError("Invalid visual sample path")
+    return f"assets/uiux/{name}{'-all' if all_choices and question.get('primary') else ''}.png"
+
+
+def render_uiux_question(question, root=ROOT, all_choices=False, asset_base="", version=""):
     choices = question_choices(question, root, all_choices)
+    numbered = all_choices and bool(question.get("primary"))
     lines = [f"**{question['label']}**", ""]
+    url = (asset_base.rstrip("/") + "/" if asset_base else "") + sample_path(question, all_choices)
+    if version:
+        url += "?v=" + version
+    codes = [str(i + 1) if numbered else chr(65 + i) for i in range(len(choices))]
+    alt = "; ".join(f"{code}: {choice['label']}" for code, choice in zip(codes, choices))
+    lines.extend([f"![Visual samples — {alt}]({url})", "", f"[Open visual samples]({url})", ""])
     for index, choice in enumerate(choices):
-        code = str(index + 1) if all_choices else chr(65 + index)
+        code = str(index + 1) if numbered else chr(65 + index)
         recommended = " (Recommended)" if choice["value"] == question["default"] else ""
         detail = " — " + choice["detail"] if choice.get("detail") else ""
         lines.append(f"- **{code}. {choice['label']}{recommended}**{detail}")
@@ -89,15 +104,15 @@ def render_uiux_question(question, root=ROOT, all_choices=False):
         f"- **Auto** — choose {label.lower()} for this question only.",
         "- **Custom** — describe your own preference or a combination.",
         "", f"Why this recommendation: {question['recommendationReason']}",
-        f"Reply with the option {'number' if all_choices else 'letter'}, Auto, or Custom: your preference. Then wait for the next question.",
+        f"Reply with the option {'number' if numbered else 'letter'}, Auto, or Custom: your preference. Then wait for the next question.",
     ])
     return "\n".join(lines)
 
 
-def render_remaining_uiux_steps(root=ROOT):
+def render_remaining_uiux_steps(root=ROOT, asset_base="", version=""):
     sections = ["## Later design stages — reference only\n\nAsk one stage per reply. Do not send these stages before the user answers the current question. Skip only explicitly answered fields; keep recommendations separate from approvals."]
     for stage in load_uiux_flow(root)["steps"][1:]:
         sections.append(f"### {stage['title']}\n")
         for question in stage["questions"]:
-            sections.append(render_uiux_question(question, root) + f"\n\nSave as `{question['path']}`.")
+            sections.append(render_uiux_question(question, root, asset_base=asset_base, version=version) + f"\n\nSave as `{question['path']}`.")
     return "\n\n".join(sections)

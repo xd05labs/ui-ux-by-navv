@@ -1,5 +1,11 @@
 # Executed verification — 2026-11-25
 
+## Visual samples with UI/UX questions
+
+The local suite passed **62 tests** after adding twelve visual comparison sheets: all eleven design questions and the expanded twenty-style menu. Chromium rendered every sheet from self-contained HTML, checking option counts/labels, page overflow, label clipping and browser errors; the resulting images were inspected visually. Integrity checks validate the current source/catalog digest, each option mapping, PNG dimensions and image hashes without requiring a browser.
+
+Repository integrity with the independent JSON Schema validator, both generated-document checks and the visual-sample check passed. The clean publisher's offline preview included 163 files. The guide displays a real image and direct preview link before each menu and uses fork-aware public asset URLs. Tests cover catalog drift, image corruption, mismatched option labels, menu numbering and fallback instructions. External LLM image rendering was not exercised or universally certified. Motion/video concepts are static reference samples, not live media. No generated application behavior changed in this update.
+
 ## Link-first AI entry
 
 The single-file entry update passed `python -m unittest discover -s tests -v`: **49 tests**, including nine entry-pack tests. Repository integrity, generated-entry consistency, local Markdown links and the offline publisher preview passed. The preview selected 129 files and included AI_START.md and its supporting code/configuration.
