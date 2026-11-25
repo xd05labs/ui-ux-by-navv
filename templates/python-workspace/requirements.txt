@@ -1,0 +1,2 @@
+# Deployment server only. Local development and tests use the standard library.
+waitress==3.0.2

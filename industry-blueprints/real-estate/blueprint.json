@@ -1,0 +1,55 @@
+{
+  "id": "real-estate",
+  "name": "Real estate",
+  "entity": "Property",
+  "collection": "Properties",
+  "audience": "Property agents and administrators",
+  "objective": "Manage property listings",
+  "style": "minimal",
+  "palette": "emerald",
+  "pages": [
+    "Overview",
+    "Properties",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "draft",
+    "listed",
+    "sold"
+  ],
+  "fields": [
+    {
+      "name": "address",
+      "label": "Address",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "price",
+      "label": "Price",
+      "type": "number",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Create listing",
+    "Update availability",
+    "Review listings"
+  ],
+  "proposedModels": [
+    "properties",
+    "viewings",
+    "agents"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Map search, media upload and transaction processing require extension.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

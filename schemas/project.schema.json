@@ -1,0 +1,318 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "project.schema.json",
+  "title": "AppForge project",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "enum": [
+        1
+      ]
+    },
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 80
+        },
+        "category": {
+          "type": "string"
+        },
+        "mode": {
+          "type": "string",
+          "enum": [
+            "quick",
+            "advanced",
+            "autonomous",
+            "reference",
+            "existing",
+            "design-only",
+            "backend-only",
+            "enterprise"
+          ]
+        },
+        "language": {
+          "type": "string",
+          "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+        },
+        "audience": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "objective": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "devices": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "mobile",
+              "tablet",
+              "desktop"
+            ]
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "name",
+        "category",
+        "mode",
+        "language",
+        "audience",
+        "objective",
+        "roles",
+        "devices"
+      ],
+      "additionalProperties": false
+    },
+    "design": {
+      "$ref": "theme.schema.json"
+    },
+    "stack": {
+      "type": "object",
+      "properties": {
+        "frontend": {
+          "type": "string",
+          "enum": [
+            "vanilla",
+            "react",
+            "nextjs",
+            "vue",
+            "nuxt",
+            "sveltekit",
+            "angular"
+          ]
+        },
+        "backend": {
+          "type": "string",
+          "enum": [
+            "python-wsgi",
+            "nodejs",
+            "fastapi",
+            "django",
+            "spring",
+            "go",
+            "dotnet",
+            "nextjs",
+            "none"
+          ]
+        },
+        "database": {
+          "type": "string",
+          "enum": [
+            "sqlite",
+            "postgresql",
+            "mysql",
+            "mongodb",
+            "none"
+          ]
+        },
+        "api": {
+          "type": "string",
+          "enum": [
+            "rest",
+            "graphql",
+            "websocket"
+          ]
+        },
+        "applicationType": {
+          "type": "string",
+          "enum": [
+            "full-stack",
+            "spa",
+            "ssr",
+            "pwa",
+            "static"
+          ]
+        },
+        "deployment": {
+          "type": "string",
+          "enum": [
+            "docker",
+            "vps",
+            "cloud",
+            "self-hosted",
+            "local"
+          ]
+        },
+        "authentication": {
+          "type": "string",
+          "enum": [
+            "email-password",
+            "otp",
+            "oauth",
+            "sso",
+            "passkeys",
+            "none"
+          ]
+        },
+        "storage": {
+          "type": "string",
+          "enum": [
+            "local",
+            "s3-compatible",
+            "cloud"
+          ]
+        }
+      },
+      "required": [
+        "frontend",
+        "backend",
+        "database",
+        "api",
+        "applicationType",
+        "deployment",
+        "authentication",
+        "storage"
+      ],
+      "additionalProperties": false
+    },
+    "features": {
+      "$ref": "feature.schema.json"
+    },
+    "constraints": {
+      "type": "object",
+      "properties": {
+        "privacyFirst": {
+          "type": "boolean"
+        },
+        "monthlyBudget": {
+          "type": "number",
+          "minimum": 0
+        },
+        "expectedUsers": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "experience": {
+          "type": "string",
+          "enum": [
+            "beginner",
+            "intermediate",
+            "advanced"
+          ]
+        },
+        "referenceAssets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "maxItems": 20
+        },
+        "existingPath": {
+          "type": "string",
+          "maxLength": 2000
+        }
+      },
+      "required": [
+        "privacyFirst",
+        "monthlyBudget",
+        "expectedUsers",
+        "experience",
+        "referenceAssets",
+        "existingPath"
+      ],
+      "additionalProperties": false
+    },
+    "quality": {
+      "type": "object",
+      "properties": {
+        "responsive": {
+          "type": "boolean"
+        },
+        "accessibility": {
+          "type": "string",
+          "enum": [
+            "WCAG 2.2 AA"
+          ]
+        },
+        "unitTesting": {
+          "type": "boolean"
+        },
+        "endToEndTesting": {
+          "type": "boolean"
+        },
+        "securityChecks": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "responsive",
+        "accessibility",
+        "unitTesting",
+        "endToEndTesting",
+        "securityChecks"
+      ],
+      "additionalProperties": false
+    },
+    "requirements": {
+      "type": "object",
+      "properties": {
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "maxItems": 100,
+          "uniqueItems": true
+        },
+        "workflows": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "maxItems": 100,
+          "uniqueItems": true
+        },
+        "acceptanceCriteria": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "maxItems": 100,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "features",
+        "workflows",
+        "acceptanceCriteria"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "project",
+    "design",
+    "stack",
+    "features",
+    "constraints",
+    "quality",
+    "requirements"
+  ],
+  "additionalProperties": false
+}

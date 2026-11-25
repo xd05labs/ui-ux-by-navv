@@ -1,0 +1,55 @@
+{
+  "id": "aerospace",
+  "name": "Aerospace",
+  "entity": "Inspection",
+  "collection": "Inspections",
+  "audience": "Maintenance planning teams",
+  "objective": "Prototype inspection administration",
+  "style": "industrial",
+  "palette": "enterprise",
+  "pages": [
+    "Overview",
+    "Inspections",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "planned",
+    "in-progress",
+    "completed"
+  ],
+  "fields": [
+    {
+      "name": "reference",
+      "label": "Vehicle reference",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "date",
+      "label": "Inspection date",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Schedule inspection",
+    "Track progress",
+    "Record completion"
+  ],
+  "proposedModels": [
+    "vehicles",
+    "inspections",
+    "maintenance_logs"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "This is not flight software or certified maintenance tooling; certification and safety analysis are external gates.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

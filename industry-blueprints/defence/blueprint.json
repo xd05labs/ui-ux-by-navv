@@ -1,0 +1,55 @@
+{
+  "id": "defence",
+  "name": "Defence",
+  "entity": "Asset",
+  "collection": "Assets",
+  "audience": "Authorized operations planners",
+  "objective": "Prototype unclassified asset administration",
+  "style": "futuristic",
+  "palette": "midnight-premium",
+  "pages": [
+    "Overview",
+    "Assets",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "available",
+    "assigned",
+    "maintenance"
+  ],
+  "fields": [
+    {
+      "name": "reference",
+      "label": "Asset reference",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "location",
+      "label": "Location",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Register asset",
+    "Assign status",
+    "Review audit trail"
+  ],
+  "proposedModels": [
+    "assets",
+    "assignments",
+    "inspections"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Unclassified synthetic data only. No targeting, weapons control or classified system integrations.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

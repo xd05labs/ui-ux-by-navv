@@ -1,0 +1,55 @@
+{
+  "id": "iot",
+  "name": "IoT monitoring",
+  "entity": "Device",
+  "collection": "Devices",
+  "audience": "IoT fleet operators",
+  "objective": "Manage a device inventory",
+  "style": "futuristic",
+  "palette": "ocean-blue",
+  "pages": [
+    "Overview",
+    "Devices",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "online",
+    "offline",
+    "maintenance"
+  ],
+  "fields": [
+    {
+      "name": "identifier",
+      "label": "Device identifier",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "location",
+      "label": "Location",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Register device",
+    "Update status",
+    "Review fleet"
+  ],
+  "proposedModels": [
+    "devices",
+    "readings",
+    "alerts"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "MQTT, telemetry ingestion and real-time alerting require integrations.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

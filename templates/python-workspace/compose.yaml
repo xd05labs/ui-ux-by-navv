@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "127.0.0.1:8000:8000"
+    environment:
+      APP_DATABASE: /data/app.sqlite3
+      APP_ORIGIN: ${APP_ORIGIN:-http://127.0.0.1:8000}
+      APP_SECURE_COOKIES: ${APP_SECURE_COOKIES:-false}
+      APP_ALLOW_REGISTRATION: ${APP_ALLOW_REGISTRATION:-true}
+    volumes:
+      - app_data:/data
+    restart: unless-stopped
+volumes:
+  app_data:

@@ -1,0 +1,17 @@
+name: Bug report
+description: Report a reproducible framework or generated-app failure
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction and expected behavior
+      description: Include Python/OS version, command, category and sanitized configuration.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Actual result and evidence
+      description: Attach sanitized errors or quality reports. Do not include secrets or private data.
+    validations:
+      required: true

@@ -1,0 +1,180 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "theme.schema.json",
+  "title": "AppForge theme",
+  "type": "object",
+  "properties": {
+    "style": {
+      "type": "string"
+    },
+    "theme": {
+      "type": "string",
+      "enum": [
+        "light",
+        "dark",
+        "system"
+      ]
+    },
+    "palette": {
+      "type": "string"
+    },
+    "primaryColor": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{6}$"
+    },
+    "borderRadius": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 32
+    },
+    "density": {
+      "type": "string",
+      "enum": [
+        "compact",
+        "comfortable",
+        "spacious"
+      ]
+    },
+    "typography": {
+      "type": "string",
+      "enum": [
+        "modern",
+        "corporate",
+        "technical",
+        "luxury",
+        "minimalist",
+        "custom"
+      ]
+    },
+    "icons": {
+      "type": "string",
+      "enum": [
+        "outline",
+        "filled",
+        "duotone",
+        "rounded",
+        "custom"
+      ]
+    },
+    "motion": {
+      "type": "string",
+      "enum": [
+        "minimal",
+        "smooth",
+        "cinematic",
+        "spring",
+        "disabled"
+      ]
+    },
+    "direction": {
+      "type": "string",
+      "enum": [
+        "ltr",
+        "rtl"
+      ]
+    },
+    "logoPosition": {
+      "type": "string",
+      "enum": [
+        "top-left",
+        "top-center",
+        "top-right",
+        "sidebar"
+      ]
+    },
+    "background": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "solid",
+            "gradient",
+            "image",
+            "video",
+            "animated",
+            "svg-pattern",
+            "mesh",
+            "particles",
+            "3d",
+            "texture"
+          ]
+        },
+        "source": {
+          "type": "string",
+          "maxLength": 1000
+        },
+        "blur": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 80
+        },
+        "opacity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "overlay": {
+          "type": "string",
+          "pattern": "^#[0-9A-Fa-f]{6}$"
+        },
+        "brightness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "saturation": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "animationSpeed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 5
+        },
+        "position": {
+          "type": "string",
+          "enum": [
+            "center",
+            "top",
+            "bottom",
+            "left",
+            "right"
+          ]
+        }
+      },
+      "required": [
+        "type",
+        "source",
+        "blur",
+        "opacity",
+        "overlay",
+        "brightness",
+        "saturation",
+        "animationSpeed",
+        "position"
+      ],
+      "additionalProperties": false
+    },
+    "navigation": {
+      "$ref": "layout.schema.json"
+    }
+  },
+  "required": [
+    "style",
+    "theme",
+    "palette",
+    "primaryColor",
+    "borderRadius",
+    "density",
+    "typography",
+    "icons",
+    "motion",
+    "direction",
+    "logoPosition",
+    "background",
+    "navigation"
+  ],
+  "additionalProperties": false
+}

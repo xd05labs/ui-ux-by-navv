@@ -1,0 +1,55 @@
+{
+  "id": "ai-app",
+  "name": "AI application",
+  "entity": "Experiment",
+  "collection": "Experiments",
+  "audience": "AI product and evaluation teams",
+  "objective": "Organize AI experiments without transmitting private data",
+  "style": "matte-glass",
+  "palette": "royal-purple",
+  "pages": [
+    "Overview",
+    "Experiments",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "planned",
+    "running",
+    "reviewed"
+  ],
+  "fields": [
+    {
+      "name": "model",
+      "label": "Model label",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "score",
+      "label": "Evaluation score",
+      "type": "number",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Define experiment",
+    "Record result",
+    "Review score"
+  ],
+  "proposedModels": [
+    "experiments",
+    "evaluations",
+    "model_versions"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Provider calls and prompt evaluation execution require a separately configured adapter.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

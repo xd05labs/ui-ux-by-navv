@@ -1,0 +1,62 @@
+{
+  "id": "restaurant",
+  "name": "Restaurant booking",
+  "entity": "Reservation",
+  "collection": "Reservations",
+  "audience": "Restaurant hosts",
+  "objective": "Organize table reservations",
+  "style": "luxury",
+  "palette": "luxury-gold",
+  "pages": [
+    "Overview",
+    "Reservations",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "requested",
+    "confirmed",
+    "seated",
+    "completed"
+  ],
+  "fields": [
+    {
+      "name": "guest",
+      "label": "Guest name",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "date",
+      "label": "Reservation date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "party_size",
+      "label": "Party size",
+      "type": "number",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Record booking",
+    "Confirm seating",
+    "Complete visit"
+  ],
+  "proposedModels": [
+    "tables",
+    "reservations",
+    "guests"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Capacity conflicts, time slots and no-show policies require additional rules.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "id": "inventory",
+  "name": "Inventory and ERP",
+  "entity": "Item",
+  "collection": "Items",
+  "audience": "Warehouse and inventory operators",
+  "objective": "Track an inventory register",
+  "style": "industrial",
+  "palette": "enterprise",
+  "pages": [
+    "Overview",
+    "Items",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "available",
+    "low-stock",
+    "out-of-stock"
+  ],
+  "fields": [
+    {
+      "name": "sku",
+      "label": "SKU",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "quantity",
+      "label": "Quantity",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "location",
+      "label": "Location",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Register item",
+    "Update quantity",
+    "Review changes"
+  ],
+  "proposedModels": [
+    "items",
+    "warehouses",
+    "stock_movements"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Purchasing, accounting and transactional stock movements require additional models.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

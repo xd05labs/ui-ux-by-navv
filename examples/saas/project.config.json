@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "project": {
+    "name": "Clarity Workspace",
+    "category": "saas",
+    "mode": "quick",
+    "language": "en",
+    "audience": "Small teams and project administrators",
+    "objective": "Organize team work in one workspace",
+    "roles": [
+      "admin",
+      "editor",
+      "viewer"
+    ],
+    "devices": [
+      "mobile",
+      "tablet",
+      "desktop"
+    ]
+  },
+  "design": {
+    "style": "bento",
+    "theme": "system",
+    "palette": "midnight-premium",
+    "primaryColor": "#325D91",
+    "borderRadius": 14,
+    "density": "comfortable",
+    "typography": "modern",
+    "icons": "outline",
+    "motion": "smooth",
+    "direction": "ltr",
+    "logoPosition": "top-left",
+    "background": {
+      "type": "gradient",
+      "source": "",
+      "blur": 0,
+      "opacity": 1,
+      "overlay": "#080E1C",
+      "brightness": 1,
+      "saturation": 1,
+      "animationSpeed": 1,
+      "position": "center"
+    },
+    "navigation": {
+      "type": "left-sidebar",
+      "collapsible": true
+    }
+  },
+  "stack": {
+    "frontend": "vanilla",
+    "backend": "python-wsgi",
+    "database": "sqlite",
+    "api": "rest",
+    "applicationType": "full-stack",
+    "deployment": "docker",
+    "authentication": "email-password",
+    "storage": "local"
+  },
+  "requirements": {
+    "features": [],
+    "workflows": [],
+    "acceptanceCriteria": []
+  },
+  "features": {
+    "authentication": true,
+    "roleBasedAccess": true,
+    "auditLog": true,
+    "search": true,
+    "export": true,
+    "notifications": false,
+    "realTimeUpdates": false,
+    "multilingual": false,
+    "payments": "none"
+  },
+  "constraints": {
+    "privacyFirst": true,
+    "monthlyBudget": 0,
+    "expectedUsers": 100,
+    "experience": "beginner",
+    "referenceAssets": [],
+    "existingPath": ""
+  },
+  "quality": {
+    "responsive": true,
+    "accessibility": "WCAG 2.2 AA",
+    "unitTesting": true,
+    "endToEndTesting": true,
+    "securityChecks": true
+  }
+}

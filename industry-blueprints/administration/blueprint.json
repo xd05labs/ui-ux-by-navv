@@ -1,0 +1,55 @@
+{
+  "id": "administration",
+  "name": "Administration",
+  "entity": "Request",
+  "collection": "Requests",
+  "audience": "Internal administration teams",
+  "objective": "Track operational requests",
+  "style": "corporate",
+  "palette": "enterprise",
+  "pages": [
+    "Overview",
+    "Requests",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "open",
+    "in-review",
+    "resolved"
+  ],
+  "fields": [
+    {
+      "name": "department",
+      "label": "Department",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "requester",
+      "label": "Requester",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Create request",
+    "Review request",
+    "Resolve request"
+  ],
+  "proposedModels": [
+    "requests",
+    "departments",
+    "approvals"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Escalation and multi-stage approval rules require extension.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

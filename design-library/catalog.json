@@ -1,0 +1,122 @@
+{
+  "apple-inspired": {
+    "description": "System typography, generous radii, quiet layered surfaces.",
+    "radius": 18,
+    "shadow": "0 12px 40px #00000012",
+    "font": "system-ui"
+  },
+  "material-design": {
+    "description": "Distinct elevation, legible controls, strong focus indicators.",
+    "radius": 16,
+    "shadow": "0 3px 12px #00000018",
+    "font": "system-ui"
+  },
+  "fluent-design": {
+    "description": "Layered surfaces, restrained depth and familiar navigation.",
+    "radius": 8,
+    "shadow": "0 10px 30px #00000012",
+    "font": "system-ui"
+  },
+  "linux-inspired": {
+    "description": "Functional controls and dense, direct navigation.",
+    "radius": 6,
+    "shadow": "none",
+    "font": "system-ui"
+  },
+  "glassmorphism": {
+    "description": "Translucent panels; maintain opaque fallback and text contrast.",
+    "radius": 20,
+    "shadow": "0 20px 50px #00000014",
+    "font": "system-ui"
+  },
+  "matte-glass": {
+    "description": "Frosted surfaces with readable solid content areas.",
+    "radius": 14,
+    "shadow": "0 8px 32px #00000010",
+    "font": "system-ui"
+  },
+  "neumorphism": {
+    "description": "Soft depth; input boundaries remain visible without shadows.",
+    "radius": 20,
+    "shadow": "6px 6px 18px #00000012",
+    "font": "system-ui"
+  },
+  "bento": {
+    "description": "Modular grids with a consistent spacing rhythm.",
+    "radius": 22,
+    "shadow": "none",
+    "font": "system-ui"
+  },
+  "futuristic": {
+    "description": "Technical typography, precise outlines and monitoring panels.",
+    "radius": 4,
+    "shadow": "0 0 24px #325D9120",
+    "font": "monospace"
+  },
+  "minimal": {
+    "description": "Whitespace, strong hierarchy and minimal ornament.",
+    "radius": 10,
+    "shadow": "none",
+    "font": "system-ui"
+  },
+  "brutalism": {
+    "description": "Heavy outlines, direct typography and sharp corners.",
+    "radius": 0,
+    "shadow": "4px 4px 0 #172B46",
+    "font": "system-ui"
+  },
+  "flat": {
+    "description": "Solid fills, clear hierarchy and little elevation.",
+    "radius": 4,
+    "shadow": "none",
+    "font": "system-ui"
+  },
+  "retro": {
+    "description": "Warm surfaces and expressive headings with readable body text.",
+    "radius": 8,
+    "shadow": "3px 3px 0 #35312B",
+    "font": "serif"
+  },
+  "cyberpunk": {
+    "description": "Dark technical surfaces; neon remains an accent.",
+    "radius": 2,
+    "shadow": "0 0 20px #7442C820",
+    "font": "monospace"
+  },
+  "corporate": {
+    "description": "Predictable information hierarchy and restrained branding.",
+    "radius": 8,
+    "shadow": "0 2px 8px #00000010",
+    "font": "system-ui"
+  },
+  "editorial": {
+    "description": "Serif headlines, long-form rhythm and clear content hierarchy.",
+    "radius": 2,
+    "shadow": "none",
+    "font": "serif"
+  },
+  "monochrome": {
+    "description": "Hierarchy through spacing, weight and accessible neutral contrast.",
+    "radius": 6,
+    "shadow": "none",
+    "font": "system-ui"
+  },
+  "industrial": {
+    "description": "Sturdy borders, compact controls and operational clarity.",
+    "radius": 2,
+    "shadow": "2px 2px 0 #34495E",
+    "font": "monospace"
+  },
+  "luxury": {
+    "description": "Refined headings, warm accents and generous whitespace.",
+    "radius": 8,
+    "shadow": "0 10px 32px #00000010",
+    "font": "serif"
+  },
+  "custom": {
+    "description": "Compose tokens intentionally; document deviations in decisions.md.",
+    "radius": 12,
+    "shadow": "none",
+    "font": "system-ui"
+  }
+}

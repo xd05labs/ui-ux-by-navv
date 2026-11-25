@@ -1,0 +1,55 @@
+{
+  "id": "education",
+  "name": "Education",
+  "entity": "Course",
+  "collection": "Courses",
+  "audience": "Educators and course administrators",
+  "objective": "Manage a learning catalog",
+  "style": "material-design",
+  "palette": "royal-purple",
+  "pages": [
+    "Overview",
+    "Courses",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "draft",
+    "published",
+    "archived"
+  ],
+  "fields": [
+    {
+      "name": "instructor",
+      "label": "Instructor",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "capacity",
+      "label": "Capacity",
+      "type": "number",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Create course",
+    "Publish course",
+    "Review changes"
+  ],
+  "proposedModels": [
+    "courses",
+    "enrollments",
+    "lessons"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Enrollment, assessments and student privacy are extension workflows.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

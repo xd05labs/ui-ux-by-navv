@@ -1,0 +1,149 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wizard-state.schema.json",
+  "title": "AppForge wizard-state",
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "type": "integer",
+      "enum": [
+        1
+      ]
+    },
+    "stage": {
+      "type": "string",
+      "enum": [
+        "discovery",
+        "planned",
+        "approved",
+        "generated",
+        "validated"
+      ]
+    },
+    "answers": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "value": {},
+          "source": {
+            "type": "string",
+            "enum": [
+              "user",
+              "recommended",
+              "automatic",
+              "imported"
+            ]
+          },
+          "at": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "value",
+          "source",
+          "at"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "approval": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "hash": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "at": {
+          "type": "string"
+        },
+        "source": {
+          "type": "string",
+          "enum": [
+            "user",
+            "autonomous"
+          ]
+        }
+      },
+      "required": [
+        "hash",
+        "at",
+        "source"
+      ],
+      "additionalProperties": false
+    },
+    "planHash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "updatedAt": {
+      "type": "string"
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "at": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "at",
+          "action"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "checkpoints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-f0-9]{32}\\.json$"
+      }
+    },
+    "validations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "at": {
+            "type": "string"
+          },
+          "report": {
+            "type": "string"
+          },
+          "passed": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "at",
+          "report",
+          "passed"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "stage",
+    "answers",
+    "approval",
+    "planHash",
+    "updatedAt",
+    "events",
+    "checkpoints",
+    "validations"
+  ],
+  "additionalProperties": false
+}

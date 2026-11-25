@@ -1,0 +1,55 @@
+{
+  "id": "analytics",
+  "name": "Analytics dashboard",
+  "entity": "Metric",
+  "collection": "Metrics",
+  "audience": "Business analysts",
+  "objective": "Track a manually maintained metric register",
+  "style": "bento",
+  "palette": "ocean-blue",
+  "pages": [
+    "Overview",
+    "Metrics",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "healthy",
+    "watch",
+    "critical"
+  ],
+  "fields": [
+    {
+      "name": "value",
+      "label": "Value",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "unit",
+      "label": "Unit",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Register metric",
+    "Update measurement",
+    "Inspect status"
+  ],
+  "proposedModels": [
+    "metrics",
+    "observations",
+    "sources"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Data warehouse connectors and time-series ingestion are not included.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

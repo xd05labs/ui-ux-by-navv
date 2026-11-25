@@ -1,0 +1,21 @@
+{
+  "ecommerce": "industry-blueprints/ecommerce/blueprint.json",
+  "food-delivery": "industry-blueprints/food-delivery/blueprint.json",
+  "restaurant": "industry-blueprints/restaurant/blueprint.json",
+  "healthcare": "industry-blueprints/healthcare/blueprint.json",
+  "education": "industry-blueprints/education/blueprint.json",
+  "finance": "industry-blueprints/finance/blueprint.json",
+  "defence": "industry-blueprints/defence/blueprint.json",
+  "aerospace": "industry-blueprints/aerospace/blueprint.json",
+  "iot": "industry-blueprints/iot/blueprint.json",
+  "saas": "industry-blueprints/saas/blueprint.json",
+  "social-media": "industry-blueprints/social-media/blueprint.json",
+  "real-estate": "industry-blueprints/real-estate/blueprint.json",
+  "analytics": "industry-blueprints/analytics/blueprint.json",
+  "portfolio": "industry-blueprints/portfolio/blueprint.json",
+  "inventory": "industry-blueprints/inventory/blueprint.json",
+  "travel": "industry-blueprints/travel/blueprint.json",
+  "ai-app": "industry-blueprints/ai-app/blueprint.json",
+  "administration": "industry-blueprints/administration/blueprint.json",
+  "custom": "industry-blueprints/custom/blueprint.json"
+}

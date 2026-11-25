@@ -1,0 +1,512 @@
+[
+  {
+    "path": "project.mode",
+    "label": "How would you like to build?",
+    "help": "Use the recommended value, auto, or a custom value.",
+    "choices": [
+      "quick",
+      "advanced",
+      "autonomous",
+      "reference",
+      "existing",
+      "design-only",
+      "backend-only",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "project.name",
+    "label": "What is the application called?",
+    "help": "Use the recommended value, auto, or a custom value."
+  },
+  {
+    "path": "project.category",
+    "label": "Which application category fits best?",
+    "help": "Blueprints provide a starter register plus domain extension requirements.",
+    "catalog": "blueprints"
+  },
+  {
+    "path": "project.objective",
+    "label": "What should the application accomplish?",
+    "help": "Describe the outcome and main workflow."
+  },
+  {
+    "path": "project.audience",
+    "label": "Who will use this application?",
+    "help": "Use the recommended value, auto, or a custom value."
+  },
+  {
+    "path": "project.devices",
+    "label": "Which devices should it support?",
+    "help": "Enter a JSON array of mobile, tablet and/or desktop."
+  },
+  {
+    "path": "project.roles",
+    "label": "Which user roles does the application need?",
+    "help": "Use a JSON array. Admin/editor/viewer are executable; custom roles require agent implementation.",
+    "excludeModes": [
+      "design-only",
+      "existing"
+    ]
+  },
+  {
+    "path": "requirements.features",
+    "label": "Which features beyond the starter register must work?",
+    "help": "Enter a JSON array. Custom requirements are retained for agent implementation; the generic generator will not pretend to implement them."
+  },
+  {
+    "path": "constraints.existingPath",
+    "label": "Where is the existing project?",
+    "help": "The agent inspects it before proposing changes.",
+    "when": {
+      "project.mode": "existing"
+    }
+  },
+  {
+    "path": "constraints.referenceAssets",
+    "label": "Which reference assets should guide the design?",
+    "help": "Enter local paths as a JSON array. Image analysis requires capable tools.",
+    "when": {
+      "project.mode": "reference"
+    }
+  },
+  {
+    "path": "constraints.expectedUsers",
+    "label": "How many users do you expect?",
+    "help": "Use the recommended value, auto, or a custom value.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "constraints.monthlyBudget",
+    "label": "What is the monthly infrastructure budget?",
+    "help": "Use the recommended value, auto, or a custom value.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "constraints.experience",
+    "label": "What is your technical experience?",
+    "help": "Use the recommended value, auto, or a custom value.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "constraints.privacyFirst",
+    "label": "Should private assets remain local?",
+    "help": "Use the recommended value, auto, or a custom value.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "design.style",
+    "label": "Which visual language feels right?",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "catalog": "styles"
+  },
+  {
+    "path": "design.palette",
+    "label": "Choose a color palette.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "catalog": "palettes"
+  },
+  {
+    "path": "design.theme",
+    "label": "Choose a color mode.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "choices": [
+      "light",
+      "dark",
+      "system"
+    ]
+  },
+  {
+    "path": "design.navigation.type",
+    "label": "Choose navigation.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "choices": [
+      "left-sidebar",
+      "right-sidebar",
+      "top-navigation",
+      "bottom-navigation",
+      "floating-sidebar",
+      "dual-sidebar",
+      "centered",
+      "bento-dashboard"
+    ]
+  },
+  {
+    "path": "design.density",
+    "label": "Choose interface density.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "choices": [
+      "compact",
+      "comfortable",
+      "spacious"
+    ]
+  },
+  {
+    "path": "design.primaryColor",
+    "label": "Choose a primary hex color.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "design.borderRadius",
+    "label": "Choose corner radius (0-32 px).",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "design.typography",
+    "label": "Choose typography.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "choices": [
+      "modern",
+      "corporate",
+      "technical",
+      "luxury",
+      "minimalist",
+      "custom"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "design.background.type",
+    "label": "Choose a background treatment.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "choices": [
+      "solid",
+      "gradient",
+      "image",
+      "video",
+      "animated",
+      "svg-pattern",
+      "mesh",
+      "particles",
+      "3d",
+      "texture"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "design.motion",
+    "label": "Choose motion.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "choices": [
+      "minimal",
+      "smooth",
+      "cinematic",
+      "spring",
+      "disabled"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "design.direction",
+    "label": "Choose text direction.",
+    "help": "Advanced media, custom assets and 3D backgrounds require agent-assisted adapters.",
+    "excludeModes": [
+      "backend-only",
+      "existing"
+    ],
+    "choices": [
+      "ltr",
+      "rtl"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "design.background.source",
+    "label": "Where is the background image?",
+    "help": "Agent review must cover dimensions, contrast, licensing and file safety.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ],
+    "when": {
+      "design.background.type": "image"
+    }
+  },
+  {
+    "path": "stack.frontend",
+    "label": "Choose a frontend.",
+    "help": "vanilla/python-wsgi/sqlite is executable. Other stacks need an agent-assisted adapter.",
+    "choices": [
+      "vanilla",
+      "react",
+      "nextjs",
+      "vue",
+      "nuxt",
+      "sveltekit",
+      "angular"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "stack.backend",
+    "label": "Choose a backend.",
+    "help": "vanilla/python-wsgi/sqlite is executable. Other stacks need an agent-assisted adapter.",
+    "choices": [
+      "python-wsgi",
+      "nodejs",
+      "fastapi",
+      "django",
+      "spring",
+      "go",
+      "dotnet",
+      "nextjs",
+      "none"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "stack.database",
+    "label": "Choose a database.",
+    "help": "vanilla/python-wsgi/sqlite is executable. Other stacks need an agent-assisted adapter.",
+    "choices": [
+      "sqlite",
+      "postgresql",
+      "mysql",
+      "mongodb",
+      "none"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "features.authentication",
+    "label": "Do users need private accounts?",
+    "help": "The full-stack workspace adapter requires authentication.",
+    "excludeModes": [
+      "design-only",
+      "existing"
+    ]
+  },
+  {
+    "path": "features.roleBasedAccess",
+    "label": "Should viewers have read-only access?",
+    "help": "The executable roles are admin/editor/viewer.",
+    "when": {
+      "features.authentication": true
+    },
+    "excludeModes": [
+      "design-only",
+      "existing"
+    ]
+  },
+  {
+    "path": "features.payments",
+    "label": "Does the application need payments?",
+    "help": "Payment providers need agent implementation and verified webhooks.",
+    "choices": [
+      "none",
+      "stripe",
+      "razorpay",
+      "paypal"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "features.realTimeUpdates",
+    "label": "Do you need live updates?",
+    "help": "WebSocket/streaming integrations require an adapter.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "features.multilingual",
+    "label": "Do you need translated copy?",
+    "help": "English copy and RTL layout are included; translations need extension.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "reference",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "stack.deployment",
+    "label": "Where will it run?",
+    "help": "Deployment files are generated; no deployment runs automatically.",
+    "choices": [
+      "docker",
+      "vps",
+      "cloud",
+      "self-hosted",
+      "local"
+    ],
+    "excludeModes": [
+      "design-only",
+      "existing"
+    ]
+  },
+  {
+    "path": "stack.authentication",
+    "label": "How should users authenticate?",
+    "help": "Email/password is executable; other methods need a provider adapter.",
+    "choices": [
+      "email-password",
+      "otp",
+      "oauth",
+      "sso",
+      "passkeys"
+    ],
+    "when": {
+      "features.authentication": true
+    },
+    "modes": [
+      "advanced",
+      "autonomous",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "stack.storage",
+    "label": "Where should application files live?",
+    "help": "Local is executable; S3 and cloud storage need validated upload/access adapters.",
+    "choices": [
+      "local",
+      "s3-compatible",
+      "cloud"
+    ],
+    "modes": [
+      "advanced",
+      "autonomous",
+      "enterprise"
+    ]
+  },
+  {
+    "path": "requirements.workflows",
+    "label": "Which business workflows must be implemented?",
+    "help": "Enter a JSON array of concrete steps or journeys. These are agent-assisted domain requirements.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "enterprise",
+      "reference"
+    ]
+  },
+  {
+    "path": "requirements.acceptanceCriteria",
+    "label": "How will you decide the application is complete?",
+    "help": "Enter a JSON array of observable acceptance criteria; retain these as pending until verified.",
+    "modes": [
+      "advanced",
+      "autonomous",
+      "enterprise",
+      "reference"
+    ]
+  }
+]

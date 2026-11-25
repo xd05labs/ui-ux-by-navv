@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "appforge-ai"
+version = "0.1.0"
+description = "Provider-independent, specification-first application building framework"
+requires-python = ">=3.11"
+license = {text = "LicenseRef-AppForge-Source-Available-1.0"}
+dependencies = []
+
+[tool.setuptools]
+packages = ["appforge"]
+
+[project.scripts]
+appforge = "appforge.cli:main"

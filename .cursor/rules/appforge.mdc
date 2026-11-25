@@ -1,0 +1,5 @@
+---
+description: Shared AppForge application-building protocol
+alwaysApply: true
+---
+Read AGENTS.md. For application generation, read START_HERE.md, ai-core/master-instructions.md and ai-core/execution-protocol.md. Resume saved workspace state and use the central instructions without duplicating them.

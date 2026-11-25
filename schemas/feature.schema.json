@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "feature.schema.json",
+  "title": "AppForge feature",
+  "type": "object",
+  "properties": {
+    "authentication": {
+      "type": "boolean"
+    },
+    "roleBasedAccess": {
+      "type": "boolean"
+    },
+    "auditLog": {
+      "type": "boolean"
+    },
+    "search": {
+      "type": "boolean"
+    },
+    "export": {
+      "type": "boolean"
+    },
+    "notifications": {
+      "type": "boolean"
+    },
+    "realTimeUpdates": {
+      "type": "boolean"
+    },
+    "multilingual": {
+      "type": "boolean"
+    },
+    "payments": {
+      "type": "string",
+      "enum": [
+        "none",
+        "stripe",
+        "razorpay",
+        "paypal"
+      ]
+    }
+  },
+  "required": [
+    "authentication",
+    "roleBasedAccess",
+    "auditLog",
+    "search",
+    "export",
+    "notifications",
+    "realTimeUpdates",
+    "multilingual",
+    "payments"
+  ],
+  "additionalProperties": false
+}

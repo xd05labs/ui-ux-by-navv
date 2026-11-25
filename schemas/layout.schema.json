@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "layout.schema.json",
+  "title": "AppForge layout",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "enum": [
+        "left-sidebar",
+        "right-sidebar",
+        "top-navigation",
+        "bottom-navigation",
+        "floating-sidebar",
+        "dual-sidebar",
+        "centered",
+        "bento-dashboard"
+      ]
+    },
+    "collapsible": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "type",
+    "collapsible"
+  ],
+  "additionalProperties": false
+}

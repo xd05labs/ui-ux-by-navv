@@ -1,0 +1,57 @@
+{
+  "id": "food-delivery",
+  "name": "Food delivery",
+  "entity": "Delivery",
+  "collection": "Deliveries",
+  "audience": "Restaurant dispatch teams",
+  "objective": "Track food delivery operations",
+  "style": "material-design",
+  "palette": "ocean-blue",
+  "pages": [
+    "Overview",
+    "Deliveries",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "queued",
+    "preparing",
+    "dispatched",
+    "delivered"
+  ],
+  "fields": [
+    {
+      "name": "address",
+      "label": "Delivery address",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "customer",
+      "label": "Customer",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Create delivery",
+    "Update dispatch status",
+    "Review activity"
+  ],
+  "proposedModels": [
+    "restaurants",
+    "menus",
+    "drivers",
+    "deliveries"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Maps, live tracking and courier assignment are extension workflows.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

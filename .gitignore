@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.coverage
+build/
+dist/
+*.egg-info/
+.env
+*.sqlite3*
+workspace/*
+!workspace/README.md
+!workspace/.gitkeep
+artifacts/
+.appforge.lock
+node_modules/
+.clean-publish-report.json

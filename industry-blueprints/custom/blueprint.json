@@ -1,0 +1,47 @@
+{
+  "id": "custom",
+  "name": "Custom application",
+  "entity": "Record",
+  "collection": "Records",
+  "audience": "Application operators",
+  "objective": "Manage a custom record workflow",
+  "style": "minimal",
+  "palette": "midnight-premium",
+  "pages": [
+    "Overview",
+    "Records",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "draft",
+    "active",
+    "archived"
+  ],
+  "fields": [
+    {
+      "name": "reference",
+      "label": "Reference",
+      "type": "text",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Create record",
+    "Edit record",
+    "Review activity"
+  ],
+  "proposedModels": [
+    "records"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Adapt the blueprint and acceptance criteria to the actual domain.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

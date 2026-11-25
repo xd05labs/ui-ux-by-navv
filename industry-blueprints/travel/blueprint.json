@@ -1,0 +1,56 @@
+{
+  "id": "travel",
+  "name": "Travel and booking",
+  "entity": "Booking",
+  "collection": "Bookings",
+  "audience": "Travel operations teams",
+  "objective": "Maintain a travel booking register",
+  "style": "matte-glass",
+  "palette": "ocean-blue",
+  "pages": [
+    "Overview",
+    "Bookings",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "requested",
+    "confirmed",
+    "completed",
+    "cancelled"
+  ],
+  "fields": [
+    {
+      "name": "destination",
+      "label": "Destination",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "date",
+      "label": "Departure date",
+      "type": "date",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Record request",
+    "Confirm itinerary",
+    "Complete booking"
+  ],
+  "proposedModels": [
+    "bookings",
+    "itineraries",
+    "travelers"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Live availability, fares and payment settlement are external integrations.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

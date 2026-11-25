@@ -1,0 +1,55 @@
+{
+  "id": "portfolio",
+  "name": "Portfolio",
+  "entity": "Work",
+  "collection": "Works",
+  "audience": "Independent creators",
+  "objective": "Maintain a private portfolio work catalog",
+  "style": "editorial",
+  "palette": "monochrome",
+  "pages": [
+    "Overview",
+    "Works",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "draft",
+    "published",
+    "archived"
+  ],
+  "fields": [
+    {
+      "name": "client",
+      "label": "Client",
+      "type": "text",
+      "required": false
+    },
+    {
+      "name": "url",
+      "label": "Project URL",
+      "type": "url",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Create work",
+    "Edit details",
+    "Mark published"
+  ],
+  "proposedModels": [
+    "works",
+    "tags",
+    "inquiries"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Public marketing pages require an agent-designed frontend.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

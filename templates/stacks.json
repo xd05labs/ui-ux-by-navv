@@ -1,0 +1,55 @@
+{
+  "python-workspace": {
+    "status": "executable",
+    "frontend": "vanilla",
+    "backend": "python-wsgi",
+    "database": "sqlite",
+    "api": "rest",
+    "suitableFor": "Local-first operational registers and low-write-volume prototypes.",
+    "runtime": "Python 3.11+; Waitress 3.0.2 for deployment",
+    "limitations": [
+      "Not a substitute for regulated domain workflows.",
+      "SQLite is not recommended for multiple independent application replicas."
+    ]
+  },
+  "react-node-postgres": {
+    "status": "agent-assisted",
+    "frontend": "react",
+    "backend": "nodejs",
+    "database": "postgresql",
+    "suitableFor": "Larger interactive products with a separately designed API."
+  },
+  "nextjs-postgres": {
+    "status": "agent-assisted",
+    "frontend": "nextjs",
+    "backend": "nextjs",
+    "database": "postgresql",
+    "suitableFor": "SEO, server rendering and integrated full-stack products."
+  },
+  "vue-fastapi": {
+    "status": "agent-assisted",
+    "frontend": "vue",
+    "backend": "fastapi",
+    "database": "postgresql",
+    "suitableFor": "Python data services with a reactive frontend."
+  },
+  "other-supported-specifications": {
+    "status": "specification-only",
+    "frontends": [
+      "nuxt",
+      "sveltekit",
+      "angular"
+    ],
+    "backends": [
+      "django",
+      "spring",
+      "go",
+      "dotnet"
+    ],
+    "databases": [
+      "mysql",
+      "mongodb"
+    ],
+    "note": "Configuration and architecture specifications only; no executable templates yet."
+  }
+}

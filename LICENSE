@@ -1,0 +1,76 @@
+APPFORGE AI - SOURCE-AVAILABLE USE LICENSE, VERSION 1.0
+
+Copyright (c) 2026 the AppForge AI rights holder identified by
+navteshsinghrana@gmail.com. All rights reserved, except as expressly granted below.
+
+1. Scope
+
+"Builder" means the AppForge AI framework and its source, instructions, schemas,
+catalogs, unrendered templates, documentation, assets and utilities in this
+repository, excluding third-party material and Generated Applications.
+"Generated Application" means application files emitted by the Builder's intended
+generation functionality, including rendered template portions and application
+design assets. Merely copying, renaming or packaging the Builder or its
+unrendered templates does not create a Generated Application.
+
+2. Limited permission to view and use
+
+The rights holder grants a non-exclusive, worldwide, royalty-free permission
+to inspect and run the unmodified Builder for personal, internal or commercial
+purposes, including generating applications. You may make only the copies
+reasonably necessary to download, install, inspect, execute and back up your
+authorized installation. You may supply necessary Builder context to an AI tool
+acting on your behalf solely to operate the Builder under these terms; this does
+not grant permission to publish that context or license it for model training.
+Configuration through documented interfaces is permitted and is not, by itself,
+a prohibited modification of Builder source.
+
+3. Restrictions on the Builder
+
+Except for sections 2 and 4, separate written permission from the rights holder,
+or rights that applicable law does not allow this license to restrict, you may
+not copy, modify, adapt, translate, create derivative works of, redistribute,
+publish, sublicense, sell or transfer the Builder or any portion of it. Do not
+remove or obscure its copyright or license notices. No trademark rights are
+granted. Viewing source does not grant an open-source license.
+
+4. Generated Application exception
+
+For the rights holder's material incorporated into a Generated Application,
+you are expressly granted a perpetual, worldwide, non-exclusive, royalty-free
+permission to use, copy, modify, merge, publish, distribute, sublicense and sell
+that Generated Application, in source or compiled form, for any purpose.
+You may choose your own license for your application and your original material.
+Retain GENERATED_APP_LICENSE.txt, or an equivalent copy of its notice and grant,
+with copies or substantial portions of the rights holder's generated material.
+This exception does not license the Builder itself, its generation engine,
+catalogs, instructions or unrendered template library for redistribution or
+modification. Your independently authored content remains yours.
+
+5. Third-party and platform rights
+
+Third-party material remains governed by its own licenses and notice obligations.
+These terms do not override rights granted by a hosting platform's applicable
+terms. Making source public on GitHub permits viewing and on-platform forking
+under GitHub's terms; this license does not purport to forbid those acts. Do not
+represent a public repository as technically copy-protected. Previously granted
+licenses remain governed by their own terms; this notice does not retroactively
+revoke valid earlier grants.
+
+6. Termination
+
+Permission to use the Builder terminates if you materially violate these terms.
+Stop unauthorized Builder use and distribution upon termination. Termination
+does not revoke the independent Generated Application grant in section 4 or
+rights that applicable law preserves. Further permissions may be requested at
+navteshsinghrana@gmail.com.
+
+7. No warranty; limitation of liability
+
+THE BUILDER AND GENERATED MATERIAL ARE PROVIDED "AS IS", WITHOUT WARRANTY OF
+ANY KIND, EXPRESS OR IMPLIED, INCLUDING MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE AND NON-INFRINGEMENT. TO THE MAXIMUM EXTENT PERMITTED BY
+APPLICABLE LAW, THE RIGHTS HOLDER IS NOT LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY ARISING FROM THE MATERIAL OR ITS USE, WHETHER IN CONTRACT, TORT OR
+OTHERWISE. NOTHING HERE EXCLUDES LIABILITY THAT APPLICABLE LAW DOES NOT ALLOW
+TO BE EXCLUDED.

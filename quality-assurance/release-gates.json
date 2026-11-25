@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "gates": [
+    {
+      "id": 1,
+      "criterion": "All required features implemented",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 2,
+      "criterion": "No broken navigation or placeholder buttons",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 3,
+      "criterion": "Application builds successfully",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 4,
+      "criterion": "Mobile, tablet and desktop layouts validated",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 5,
+      "criterion": "Accessibility and keyboard navigation tested",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 6,
+      "criterion": "Frontend and backend integration tested",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 7,
+      "criterion": "Database migrations validated",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 8,
+      "criterion": "Authentication and authorization verified",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 9,
+      "criterion": "Secrets excluded from source code",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 10,
+      "criterion": "Dependency and security checks completed",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 11,
+      "criterion": "Performance benchmarks executed",
+      "status": "pending",
+      "evidence": null
+    },
+    {
+      "id": 12,
+      "criterion": "Installation and deployment documentation completed",
+      "status": "pending",
+      "evidence": null
+    }
+  ]
+}

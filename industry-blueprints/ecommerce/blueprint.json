@@ -1,0 +1,61 @@
+{
+  "id": "ecommerce",
+  "name": "Commerce",
+  "entity": "Product",
+  "collection": "Products",
+  "audience": "Merchants and catalog operators",
+  "objective": "Manage a product catalog and stock",
+  "style": "bento",
+  "palette": "emerald",
+  "pages": [
+    "Overview",
+    "Products",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "draft",
+    "active",
+    "archived"
+  ],
+  "fields": [
+    {
+      "name": "sku",
+      "label": "SKU",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "price",
+      "label": "Price",
+      "type": "number",
+      "required": true
+    },
+    {
+      "name": "stock",
+      "label": "Stock",
+      "type": "number",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Browse catalog",
+    "Manage stock",
+    "Review product activity"
+  ],
+  "proposedModels": [
+    "orders",
+    "order_lines",
+    "payments"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Checkout, tax, shipping, refunds and payment webhooks require an agent implementation.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

@@ -1,0 +1,3 @@
+# Optional verification tools; AppForge itself has no runtime dependencies.
+jsonschema==4.26.0
+playwright==1.65.2

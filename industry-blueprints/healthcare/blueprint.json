@@ -1,0 +1,56 @@
+{
+  "id": "healthcare",
+  "name": "Healthcare",
+  "entity": "Appointment",
+  "collection": "Appointments",
+  "audience": "Authorized clinic operators",
+  "objective": "Prototype non-clinical appointment administration",
+  "style": "corporate",
+  "palette": "ocean-blue",
+  "pages": [
+    "Overview",
+    "Appointments",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "requested",
+    "confirmed",
+    "completed",
+    "cancelled"
+  ],
+  "fields": [
+    {
+      "name": "date",
+      "label": "Appointment date",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "department",
+      "label": "Department",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Request appointment",
+    "Confirm appointment",
+    "Record completion"
+  ],
+  "proposedModels": [
+    "providers",
+    "appointments",
+    "patients"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "Use synthetic data only until privacy, retention, jurisdiction and clinical safety requirements are reviewed.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

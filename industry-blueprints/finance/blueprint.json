@@ -1,0 +1,56 @@
+{
+  "id": "finance",
+  "name": "Banking and finance",
+  "entity": "Review",
+  "collection": "Reviews",
+  "audience": "Financial operations teams",
+  "objective": "Prototype an internal review queue",
+  "style": "corporate",
+  "palette": "enterprise",
+  "pages": [
+    "Overview",
+    "Reviews",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "pending",
+    "in-review",
+    "approved",
+    "rejected"
+  ],
+  "fields": [
+    {
+      "name": "reference",
+      "label": "Reference",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "amount",
+      "label": "Amount",
+      "type": "number",
+      "required": true
+    }
+  ],
+  "workflows": [
+    "Submit review",
+    "Inspect record",
+    "Update decision"
+  ],
+  "proposedModels": [
+    "accounts",
+    "ledger_entries",
+    "reviews"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "This starter is not a bank or ledger. Reconciliation, compliance and immutable accounting require specialist design.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}

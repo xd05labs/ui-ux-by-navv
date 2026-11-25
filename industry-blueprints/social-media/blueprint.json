@@ -1,0 +1,55 @@
+{
+  "id": "social-media",
+  "name": "Social media",
+  "entity": "Post",
+  "collection": "Posts",
+  "audience": "Content and community teams",
+  "objective": "Manage an editorial publishing queue",
+  "style": "apple-inspired",
+  "palette": "royal-purple",
+  "pages": [
+    "Overview",
+    "Posts",
+    "Activity",
+    "Settings"
+  ],
+  "navigation": "left-sidebar",
+  "statuses": [
+    "draft",
+    "review",
+    "published"
+  ],
+  "fields": [
+    {
+      "name": "channel",
+      "label": "Channel",
+      "type": "text",
+      "required": true
+    },
+    {
+      "name": "date",
+      "label": "Publish date",
+      "type": "date",
+      "required": false
+    }
+  ],
+  "workflows": [
+    "Draft content",
+    "Review content",
+    "Mark published"
+  ],
+  "proposedModels": [
+    "posts",
+    "comments",
+    "follows"
+  ],
+  "starterScope": "Authenticated, owner-scoped CRUD register with search, export and audit history.",
+  "extensions": "External publishing, feeds and moderation automation are not included.",
+  "acceptanceCriteria": [
+    "Anonymous requests cannot read private records.",
+    "Users can create, edit, search, export and delete their own records.",
+    "Other users cannot read or mutate these records.",
+    "Viewer role cannot write.",
+    "State changes are recorded in audit history."
+  ]
+}
