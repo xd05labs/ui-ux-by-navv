@@ -4,7 +4,7 @@ The entry point is `AI_START.md`. Users can write their software requirements fi
 
 ## Link to share after publishing this update
 
-Human-readable entry:
+Readable entry:
 
 https://github.com/xd05labs/ui-ux-by-navv/blob/main/AI_START.md
 
