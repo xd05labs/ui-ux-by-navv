@@ -6,7 +6,8 @@ import sys
 import tempfile
 import unittest
 
-from appforge.ai_entry import (DEFAULT_REPOSITORY, MAX_BYTES, ROOT, build_ai_start,
+from appforge.ai_entry import (DEFAULT_REPOSITORY, MAX_BYTES, MAX_ENTRY_BYTES, ROOT,
+                              build_ai_context, build_ai_documents, build_ai_start,
                               repository_url, source_files)
 
 
@@ -25,13 +26,14 @@ class AIEntryTests(unittest.TestCase):
         content = build_ai_start()
         self.assertEqual(content, (ROOT / "AI_START.md").read_text(encoding="utf-8"))
         master = (ROOT / "ai-core/master-instructions.md").read_text(encoding="utf-8").strip()
-        self.assertIn(master, content)
-        self.assertLessEqual(len(content.encode("utf-8")), MAX_BYTES)
-        self.assertIn("ask at most three", content)
+        self.assertIn(master, build_ai_context())
+        self.assertEqual(build_ai_context(), (ROOT / "AI_CONTEXT.md").read_text(encoding="utf-8"))
+        self.assertLessEqual(len(content.encode("utf-8")), MAX_ENTRY_BYTES)
+        self.assertIn("## Shared UI/UX protocol", content)
         self.assertIn("A URL alone cannot give a model", content)
 
     def test_catalog_counts_and_question_paths_are_present_in_one_file(self):
-        content = build_ai_start()
+        content = build_ai_context()
         for name in ("industry-blueprints/catalog.json", "design-library/catalog.json", "design-engine/palettes/catalog.json"):
             for key in json.loads((ROOT / name).read_text(encoding="utf-8")):
                 self.assertIn(f"`{key}`", content)
@@ -47,8 +49,9 @@ class AIEntryTests(unittest.TestCase):
         (root / "workspace/project.config.json").write_text(sentinel, encoding="utf-8")
         (root / "workspace/brief.md").write_text(sentinel, encoding="utf-8")
         (root / ".env").write_text(sentinel, encoding="utf-8")
-        self.assertNotIn(sentinel, build_ai_start(root))
-        self.assertEqual(build_ai_start(root), build_ai_start())
+        for name, content in build_ai_documents(root).items():
+            self.assertNotIn(sentinel, content)
+            self.assertEqual(content, build_ai_documents()[name])
 
     def test_protocol_change_changes_the_entry_and_its_fingerprint(self):
         root = self.fixture()
@@ -57,15 +60,15 @@ class AIEntryTests(unittest.TestCase):
         path.write_text(path.read_text(encoding="utf-8") + "\nReviewed extra requirement.\n", encoding="utf-8")
         updated = build_ai_start(root)
         self.assertNotEqual(previous, updated)
-        self.assertIn("Reviewed extra requirement.", updated)
+        self.assertIn("Reviewed extra requirement.", build_ai_context(root))
 
     def test_output_is_stable_across_lf_and_crlf_checkouts(self):
         root = self.fixture()
-        before = build_ai_start(root)
+        before = build_ai_documents(root)
         for relative in source_files(root):
             path = root / relative
             path.write_bytes(path.read_text(encoding="utf-8").replace("\n", "\r\n").encode("utf-8"))
-        self.assertEqual(build_ai_start(root), before)
+        self.assertEqual(build_ai_documents(root), before)
 
     def test_catalog_cannot_read_outside_its_declared_source_tree(self):
         root = self.fixture()
@@ -97,15 +100,17 @@ class AIEntryTests(unittest.TestCase):
         path = root / "ai-core/master-instructions.md"
         path.write_text("x" * MAX_BYTES, encoding="utf-8")
         with self.assertRaisesRegex(ValueError, "context budget"):
+            build_ai_context(root)
+        (root / "ai-core/uiux-discovery.md").write_text("x" * MAX_ENTRY_BYTES, encoding="utf-8")
+        with self.assertRaisesRegex(ValueError, "context budget"):
             build_ai_start(root)
 
     def test_check_command_is_read_only(self):
-        path = ROOT / "AI_START.md"
-        before = path.read_bytes()
+        before = {name: (ROOT / name).read_bytes() for name in build_ai_documents()}
         result = subprocess.run([sys.executable, "scripts/build_ai_start.py", "--check"],
                                 cwd=ROOT, capture_output=True, text=True)
         self.assertEqual(result.returncode, 0, result.stderr)
-        self.assertEqual(path.read_bytes(), before)
+        self.assertEqual({name: (ROOT / name).read_bytes() for name in before}, before)
 
 
 if __name__ == "__main__":

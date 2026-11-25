@@ -3,7 +3,7 @@
 | Stage | Inputs | Durable outputs | Exit condition |
 | --- | --- | --- | --- |
 | Initialize | User request, host tools, repository | Capability declaration, selected workspace | Saved state inspected |
-| Discover | Relevant wizard questions, blueprint | Typed config, answer provenance | Purpose, audience, scope and constraints sufficient |
+| Discover | User brief, UI/UX menus, blueprint | Explicit visual choices, answer provenance, design review | Unanswered visual choices selected/reviewed, then remaining functional scope resolved |
 | Plan | Config, catalogs, constraints | Requirements, architecture, decisions, design preview, tokens | Concrete review package exists |
 | Approve | Review package and source/config hash | Approval record | Existing authorization or explicit review covers the plan |
 | Generate | Current approved plan | Managed source, manifest, migration and deploy files | No unresolved file conflicts |

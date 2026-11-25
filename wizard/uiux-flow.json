@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "excludeModes": [
+    "backend-only"
+  ],
+  "steps": [
+    {
+      "id": "style",
+      "title": "Choose the visual style",
+      "questions": [
+        {
+          "path": "design.style",
+          "label": "Which UI style would you like?",
+          "default": "bento",
+          "recommendationReason": "A clear modular starting point for application screens; adapt the recommendation to the user brief.",
+          "catalog": "styles",
+          "primary": [
+            "minimal",
+            "bento",
+            "matte-glass",
+            "apple-inspired",
+            "material-design",
+            "corporate",
+            "futuristic",
+            "luxury"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colors",
+      "title": "Choose theme and colors",
+      "questions": [
+        {
+          "path": "design.theme",
+          "label": "Which color mode do you prefer?",
+          "default": "system",
+          "recommendationReason": "Respect the device preference while supporting both readable modes.",
+          "choices": [
+            {
+              "value": "light",
+              "label": "Light"
+            },
+            {
+              "value": "dark",
+              "label": "Dark"
+            },
+            {
+              "value": "system",
+              "label": "Follow system"
+            }
+          ]
+        },
+        {
+          "path": "design.palette",
+          "label": "Which color palette do you prefer?",
+          "default": "midnight-premium",
+          "recommendationReason": "A restrained blue palette; adapt to existing branding or the selected industry.",
+          "catalog": "palettes"
+        }
+      ]
+    },
+    {
+      "id": "layout",
+      "title": "Choose layout and navigation",
+      "questions": [
+        {
+          "path": "design.navigation.type",
+          "label": "How should people navigate the app?",
+          "default": "left-sidebar",
+          "recommendationReason": "Useful for applications with several work areas; adapt to the actual page structure.",
+          "choices": [
+            {
+              "value": "left-sidebar",
+              "label": "Left sidebar"
+            },
+            {
+              "value": "right-sidebar",
+              "label": "Right sidebar"
+            },
+            {
+              "value": "top-navigation",
+              "label": "Top navigation"
+            },
+            {
+              "value": "bottom-navigation",
+              "label": "Bottom navigation"
+            },
+            {
+              "value": "floating-sidebar",
+              "label": "Floating sidebar"
+            },
+            {
+              "value": "dual-sidebar",
+              "label": "Dual sidebar / multi-panel concept"
+            },
+            {
+              "value": "centered",
+              "label": "Centered layout"
+            },
+            {
+              "value": "bento-dashboard",
+              "label": "Bento dashboard"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "components",
+      "title": "Choose spacing and corners",
+      "questions": [
+        {
+          "path": "design.density",
+          "label": "How spacious should the interface feel?",
+          "default": "comfortable",
+          "recommendationReason": "Balances readability with useful information density.",
+          "choices": [
+            {
+              "value": "compact",
+              "label": "Compact"
+            },
+            {
+              "value": "comfortable",
+              "label": "Comfortable"
+            },
+            {
+              "value": "spacious",
+              "label": "Spacious"
+            }
+          ]
+        },
+        {
+          "path": "design.borderRadius",
+          "label": "What corner treatment do you like?",
+          "default": 14,
+          "recommendationReason": "A softly rounded starting point; adjust to the chosen visual style.",
+          "choices": [
+            {
+              "value": 0,
+              "label": "Square - 0px"
+            },
+            {
+              "value": 8,
+              "label": "Subtle - 8px"
+            },
+            {
+              "value": 14,
+              "label": "Soft - 14px"
+            },
+            {
+              "value": 22,
+              "label": "Rounded - 22px"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "typography",
+      "title": "Choose typography and icons",
+      "questions": [
+        {
+          "path": "design.typography",
+          "label": "Which typography direction fits the app?",
+          "default": "modern",
+          "recommendationReason": "A readable system-font foundation for application interfaces.",
+          "choices": [
+            {
+              "value": "modern",
+              "label": "Modern"
+            },
+            {
+              "value": "corporate",
+              "label": "Corporate"
+            },
+            {
+              "value": "technical",
+              "label": "Technical / monospace"
+            },
+            {
+              "value": "luxury",
+              "label": "Luxury / serif"
+            },
+            {
+              "value": "minimalist",
+              "label": "Minimalist"
+            }
+          ]
+        },
+        {
+          "path": "design.icons",
+          "label": "Which icon style do you prefer?",
+          "default": "outline",
+          "recommendationReason": "Keeps common navigation controls visually light.",
+          "choices": [
+            {
+              "value": "outline",
+              "label": "Outline"
+            },
+            {
+              "value": "filled",
+              "label": "Filled"
+            },
+            {
+              "value": "duotone",
+              "label": "Duotone"
+            },
+            {
+              "value": "rounded",
+              "label": "Rounded"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "background",
+      "title": "Choose a background",
+      "questions": [
+        {
+          "path": "design.background.type",
+          "label": "What background should sit behind the interface?",
+          "default": "gradient",
+          "recommendationReason": "A subtle gradient provides depth without competing with content.",
+          "choices": [
+            {
+              "value": "solid",
+              "label": "Solid color"
+            },
+            {
+              "value": "gradient",
+              "label": "Subtle gradient"
+            },
+            {
+              "value": "mesh",
+              "label": "Mesh gradient"
+            },
+            {
+              "value": "svg-pattern",
+              "label": "Pattern"
+            },
+            {
+              "value": "image",
+              "label": "Image / photo"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            },
+            {
+              "value": "animated",
+              "label": "Animated"
+            },
+            {
+              "value": "particles",
+              "label": "Particles"
+            },
+            {
+              "value": "3d",
+              "label": "3D"
+            },
+            {
+              "value": "texture",
+              "label": "Texture"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "motion",
+      "title": "Choose motion",
+      "questions": [
+        {
+          "path": "design.motion",
+          "label": "How much animation would you like?",
+          "default": "smooth",
+          "recommendationReason": "Use restrained transitions and always respect reduced motion.",
+          "choices": [
+            {
+              "value": "minimal",
+              "label": "Minimal"
+            },
+            {
+              "value": "smooth",
+              "label": "Smooth"
+            },
+            {
+              "value": "cinematic",
+              "label": "Cinematic"
+            },
+            {
+              "value": "spring",
+              "label": "Spring-like"
+            },
+            {
+              "value": "disabled",
+              "label": "Disabled"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "branding",
+      "title": "Choose branding placement",
+      "questions": [
+        {
+          "path": "design.logoPosition",
+          "label": "Where should the logo or application name appear?",
+          "default": "top-left",
+          "recommendationReason": "A familiar location for navigation and brand recognition.",
+          "choices": [
+            {
+              "value": "top-left",
+              "label": "Top left"
+            },
+            {
+              "value": "top-center",
+              "label": "Top center"
+            },
+            {
+              "value": "top-right",
+              "label": "Top right"
+            },
+            {
+              "value": "sidebar",
+              "label": "Inside sidebar"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "review": {
+    "id": "design-review",
+    "title": "Review your UI/UX choices",
+    "actions": [
+      "Approve design",
+      "Change a choice",
+      "Show two variations"
+    ]
+  }
+}
